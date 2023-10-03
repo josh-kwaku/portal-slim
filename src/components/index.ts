@@ -5,7 +5,7 @@ import policy from "./policy";
 
 const router = express.Router();
 
-const BASE_ROUTE_MESSAGE = ""
+const BASE_ROUTE_MESSAGE = "Healthy"
 
 export const handleResponse = function(
     response: AppResponse,

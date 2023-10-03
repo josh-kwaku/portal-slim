@@ -1,19 +1,5 @@
 import { default as sq, Sequelize, UpdateOptions } from 'sequelize'
 
-import { PolicyCancellationReason, PolicyStatus } from '@alteos/common'
-import {
-  CustomerType,
-  PremiumCalculationType,
-  TestingFlag
-} from '@alteos/dictionaries'
-import {
-  IPaymentAmount,
-  IPolicyCancellationData,
-  IPolicyCollectionData,
-  IPolicyInvoicingData,
-  IPolicyObligationData
-} from '@alteos/policy-client'
-import { ITax } from '@alteos/search-client'
 
 import { IValues, IMetadata } from '../../policy/interfaces'
 import {
@@ -36,15 +22,15 @@ export interface Policy {
   referralPartnerId: string | null
   customerId: string
   activationCode?: string
-  status: PolicyStatus
+  status: any
   paymentData: IPolicyPaymentData
   accountingData: IPolicyAccountingData
-  obligationData: IPolicyObligationData
-  collectionData: IPolicyCollectionData
-  invoicingData: IPolicyInvoicingData
-  cancellationData: IPolicyCancellationData
-  cancellationReason: PolicyCancellationReason
-  withdrawalReason: PolicyCancellationReason
+  obligationData: any
+  collectionData: any
+  invoicingData: any
+  cancellationData: any
+  cancellationReason: any
+  withdrawalReason: any
   cancellationRequestedAt: Date | string | null
   withdrawalRequestedAt: Date | string | null
   effectiveAt: Date | string | null
@@ -52,7 +38,7 @@ export interface Policy {
   data: IPolicyData
   customer: IPolicyCustomer
   metadata: IMetadata
-  testingFlags: TestingFlag[]
+  testingFlags: any[]
   issuedAt: Date | string | null
   boundAt: Date | string | null
   startsAt: Date | string
@@ -75,7 +61,7 @@ export interface IPolicyData {
   package?: IPolicyPackage
   values: IValues
   objects: IPolicyObject[]
-  taxes: ITax[]
+  taxes: any[]
   device?: IPolicyDevice
 }
 
@@ -94,7 +80,7 @@ export interface IPolicyDiscount {
 }
 
 export interface IPolicyPaymentData {
-  calculationType?: PremiumCalculationType
+  calculationType?: any
   premium: number
   taxes: number
   gross: number
@@ -108,8 +94,8 @@ export interface IPolicyPaymentData {
   taxesExclDiscounts: number
   grossExclDiscounts: number
   discountRate?: number
-  marketingDiscounts?: IPaymentAmount
-  contractValue: IPaymentAmount
+  marketingDiscounts?: any
+  contractValue: any
 }
 
 export interface IPolicyAccountingData {
@@ -166,7 +152,7 @@ export interface IPolicyRisk {
 }
 
 export interface IPolicyCustomer {
-  type: CustomerType
+  type: any
   email: string
   lastName: string
   firstName: string
