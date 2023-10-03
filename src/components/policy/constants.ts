@@ -1,0 +1,6 @@
+export const ACTIVATION_CODE_LENGTH = 50
+export const CANCELLATION_REASON_LENGTH = 64
+export const PRETTY_ID_COLUMN_LENGTH = 21
+export const PRODUCT_VERSION_LENGTH = 16
+export const POLICY_STATUS_LENGTH = 16
+export const POLICY_MODEL_NAME='policies'
