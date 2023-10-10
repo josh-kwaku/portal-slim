@@ -20,9 +20,9 @@ export class DbClient {
                 logging: true,
                 ...dbOptions
               });   
-              console.log("GG: ", DbClient.instance)
+              DbClient.instance.authenticate();
         } catch (error) {
-            console.error("Error: ", error);
+            console.error("Error connecting to DB: ", error);
         }
       }
   

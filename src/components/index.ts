@@ -2,6 +2,7 @@ import express, { Response, Request, NextFunction } from "express";
 import { AppResponse, SuccessResponse, Status } from "../helpers/response";
 import { HttpStatusCode } from "../helpers/httpStatusCodes"
 import policy from "./policy";
+import { DbClient } from "../database/sequelize";
 
 const router = express.Router();
 
@@ -17,7 +18,7 @@ export const handleResponse = function(
   };
 
 router.get('/', (req: Request, res: Response) => {
-    return handleResponse(new SuccessResponse({}, BASE_ROUTE_MESSAGE, HttpStatusCode.OK), res);
+  return handleResponse(new SuccessResponse({}, BASE_ROUTE_MESSAGE, HttpStatusCode.OK), res);
 });
 
 router.use('/policy', policy);
