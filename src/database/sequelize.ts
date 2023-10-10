@@ -7,6 +7,7 @@ export class DbClient {
   
     public static getInstance(): Sequelize {
       if (typeof DbClient.instance === 'undefined') {
+        console.log("Entered Here");
         const dbOptions: Options = {
           logging: (message: string): void => {
             logger.info('DB Client', message)
@@ -19,6 +20,7 @@ export class DbClient {
                 logging: true,
                 ...dbOptions
               });   
+              console.log("GG: ", DbClient.instance)
         } catch (error) {
             console.error("Error: ", error);
         }

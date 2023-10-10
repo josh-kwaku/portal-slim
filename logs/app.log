@@ -1,2 +1,18 @@
 {"level":"info","message":"Server listening on port 9500","service":"Policy Slim","timestamp":"2023-10-03 17:44:26"}
 {"level":"info","message":"SIGINT Signal Received","service":"Policy Slim","timestamp":"2023-10-03 20:22:32"}
+{"level":"info","message":"Server listening on port 9500","service":"Policy Slim","timestamp":"2023-10-03 23:35:12"}
+{"level":"info","message":"Server listening on port 9500","service":"Policy Slim","timestamp":"2023-10-10 06:29:30"}
+{"level":"info","message":"Server listening on port 9500","service":"Policy Slim","timestamp":"2023-10-10 06:29:31"}
+{"level":"info","message":"SIGINT Signal Received","service":"Policy Slim","timestamp":"2023-10-10 06:29:45"}
+{"level":"info","message":"Server listening on port 9500","service":"Policy Slim","timestamp":"2023-10-10 06:31:08"}
+{"level":"info","message":"Server listening on port 9500","service":"Policy Slim","timestamp":"2023-10-10 06:31:10"}
+{"level":"info","message":"SIGINT Signal Received","service":"Policy Slim","timestamp":"2023-10-10 06:33:09"}
+{"level":"info","message":"Server listening on port 9600","service":"Policy Slim","timestamp":"2023-10-10 06:33:36"}
+{"level":"info","message":"SIGINT Signal Received","service":"Policy Slim","timestamp":"2023-10-10 06:34:14"}
+{"level":"info","message":"Server listening on port 9600","service":"Policy Slim","timestamp":"2023-10-10 06:34:20"}
+{"level":"info","message":"::1 - - [10/Oct/2023:04:41:38 +0000] \"GET /partner/3984323 HTTP/1.1\" 404 154 \"-\" \"PostmanRuntime/7.33.0\"\n","service":"Policy Slim","timestamp":"2023-10-10 06:41:38"}
+{"level":"info","message":"::1 - - [10/Oct/2023:04:42:04 +0000] \"GET /policy/partner/3984323 HTTP/1.1\" 500 16 \"-\" \"PostmanRuntime/7.33.0\"\n","service":"Policy Slim","timestamp":"2023-10-10 06:42:04"}
+{"level":"info","message":"SIGINT Signal Received","service":"Policy Slim","timestamp":"2023-10-10 06:42:12"}
+{"level":"info","message":"Server listening on port 9600","service":"Policy Slim","timestamp":"2023-10-10 06:42:19"}
+{"level":"error","message":"error fetching partner policies connect ECONNREFUSED 127.0.0.1:5432","name":"SequelizeConnectionRefusedError","original":{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-111,"port":5432,"syscall":"connect"},"parent":{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-111,"port":5432,"syscall":"connect"},"service":"Policy Slim","stack":"SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:5432\n    at Client._connectionCallback (/home/kwakujosh/dev/portal-slim/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:131:24)\n    at Client._handleErrorWhileConnecting (/home/kwakujosh/dev/portal-slim/node_modules/pg/lib/client.js:327:19)\n    at Client._handleErrorEvent (/home/kwakujosh/dev/portal-slim/node_modules/pg/lib/client.js:337:19)\n    at Connection.emit (node:events:514:28)\n    at Socket.reportStreamError (/home/kwakujosh/dev/portal-slim/node_modules/pg/lib/connection.js:58:12)\n    at Socket.emit (node:events:514:28)\n    at emitErrorNT (node:internal/streams/destroy:151:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2023-10-10 06:42:24"}
+{"level":"info","message":"::1 - - [10/Oct/2023:04:42:24 +0000] \"GET /policy/partner/3984323 HTTP/1.1\" 500 73 \"-\" \"PostmanRuntime/7.33.0\"\n","service":"Policy Slim","timestamp":"2023-10-10 06:42:24"}

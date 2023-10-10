@@ -9,7 +9,7 @@ import mongoose from "mongoose";
 
 const server = http.createServer(app);
 
-const PORT = process.env.PORT || 9500;
+const PORT = process.env.PORT || 9600;
 
 const closeOpenConnections = (errorOccurred: boolean) => {
     logger.info('Shutting down server and open connections');

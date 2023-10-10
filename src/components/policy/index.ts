@@ -23,19 +23,7 @@ const jwtCheck = auth({
     jwksUri: `${process.env.ACCESS_API_AUTH_ISSUER_URL}.well-known/jwks.json`
 });
 
-router.get('/partner/:id', ((req, res, next) => {
-    const headers = req.headers;
-    const auth = headers.authorization;
-    console.log("KKK: ", auth);
-    if (auth) {
-        const token = auth.split(' ')[1];
-        if (token) {
-            console.log(jwt.decode(token))
-        } 
-    }
-    console.log("Auth : ", headers, req.params);
-    next()
-}), jwtCheck, requiredScopes('read:policies'), async (req: Request, res: Response) => {
+router.get('/partner/:id', async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const key = req.query["key"] as string;
